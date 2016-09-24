@@ -10,6 +10,8 @@ class CreateUsers < ActiveRecord::Migration[5.0]
       t.boolean :verifiedDriver
       t.string :field
       t.string :gender
+      t.string :profilePic
+      t.string :description
 
       # trip collection
       t.references :trips

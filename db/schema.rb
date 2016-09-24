@@ -20,9 +20,11 @@ ActiveRecord::Schema.define(version: 20160924135222) do
     t.float    "lon"
     t.string   "addr"
     t.integer  "trip_id"
+    t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["trip_id"], name: "index_locations_on_trip_id", using: :btree
+    t.index ["user_id"], name: "index_locations_on_user_id", using: :btree
   end
 
   create_table "trips", force: :cascade do |t|
@@ -31,17 +33,31 @@ ActiveRecord::Schema.define(version: 20160924135222) do
     t.boolean  "isDriver"
     t.integer  "origin_location_id"
     t.integer  "destination_location_id"
+    t.integer  "user_id"
     t.datetime "created_at",              null: false
     t.datetime "updated_at",              null: false
     t.index ["destination_location_id"], name: "index_trips_on_destination_location_id", using: :btree
     t.index ["origin_location_id"], name: "index_trips_on_origin_location_id", using: :btree
+    t.index ["user_id"], name: "index_trips_on_user_id", using: :btree
   end
 
   create_table "users", force: :cascade do |t|
     t.string   "fName"
     t.string   "lName"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "credits"
+    t.float    "rating"
+    t.string   "onBoarding"
+    t.boolean  "verifiedDriver"
+    t.string   "field"
+    t.string   "gender"
+    t.integer  "trips_id"
+    t.integer  "home_location_id"
+    t.integer  "work_location_id"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+    t.index ["home_location_id"], name: "index_users_on_home_location_id", using: :btree
+    t.index ["trips_id"], name: "index_users_on_trips_id", using: :btree
+    t.index ["work_location_id"], name: "index_users_on_work_location_id", using: :btree
   end
 
 end
