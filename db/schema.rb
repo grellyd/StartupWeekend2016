@@ -10,9 +10,38 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20160924135222) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "locations", force: :cascade do |t|
+    t.float    "lat"
+    t.float    "lon"
+    t.string   "addr"
+    t.integer  "trip_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["trip_id"], name: "index_locations_on_trip_id", using: :btree
+  end
+
+  create_table "trips", force: :cascade do |t|
+    t.date     "date"
+    t.time     "arrival"
+    t.boolean  "isDriver"
+    t.integer  "origin_location_id"
+    t.integer  "destination_location_id"
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+    t.index ["destination_location_id"], name: "index_trips_on_destination_location_id", using: :btree
+    t.index ["origin_location_id"], name: "index_trips_on_origin_location_id", using: :btree
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string   "fName"
+    t.string   "lName"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
 end
