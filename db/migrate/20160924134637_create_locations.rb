@@ -4,7 +4,10 @@ class CreateLocations < ActiveRecord::Migration[5.0]
       t.float :lat
       t.float :lon
       t.string :addr
+
+      # associated trips and user
       t.references :trip
+      t.references :user
 
       t.timestamps
     end
