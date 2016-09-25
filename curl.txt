@@ -1,1 +1,3 @@
 curl -H "Content-Type:application/json; charset=utf-8" -d "'location':{'lat':111,'lon':1}" http://localhost:3000/tasks
+curl -X POST -H "Content-Type:application/json; charset=utf-8" -d '{"location": {"lat": 5, "lon":7}}' http://localhost:3000/api/v1/locations
+curl -X POST -H "Content-Type:application/json; charset=utf-8" -d '{"location": {"lat": 5, "lon":7, "Trip": 0, "User":0}}' http://localhost:3000/api/v1/locations

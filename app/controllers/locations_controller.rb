@@ -19,6 +19,7 @@ class LocationsController < ApplicationController
 
   def index
     @locations = Location.all
+    puts @locations
     if @locations.nil?
         render nothing: true
     else
@@ -29,10 +30,18 @@ class LocationsController < ApplicationController
         end
     end
   end
+  
   def create
-      @location = Location.new
-      @location.assign_attributes(@json['location'])
-      if @location.save
+      puts "starting create..."
+      puts @json
+      @location = Location.new(location_params)
+      puts @location
+      puts "====="
+      puts @location.lon
+      puts @location.lat
+      puts "====="
+      #@location.assign_attributes(@json['location'])
+      if @location.save!
           render json: @location
       else
           render nothing: true, status: :bad_request
