@@ -1,0 +1,1 @@
+curl -H "Content-Type:application/json; charset=utf-8" -d "'location':{'lat':111,'lon':1}" http://localhost:3000/tasks

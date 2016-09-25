@@ -1,8 +1,4 @@
 class User < ApplicationRecord
-    include ActiveModel::Serializers::JSON
-
-
-
     belongs_to :trips, :class_name => 'Trip'
     has_many :trips
 

@@ -19,8 +19,14 @@ class LocationsController < ApplicationController
 
   def index
     @locations = Location.all
-    respond_to do |format|
-        format.json {render json: @locations}
+    if @locations.nil?
+        render nothing: true
+    else
+        respond_to do |format|
+            format.html
+            format.xml
+            format.json {render json: @locations}
+        end
     end
   end
   def create
@@ -29,7 +35,7 @@ class LocationsController < ApplicationController
       if @location.save
           render json: @location
       else
-          render nother: true, status: :bad_request
+          render nothing: true, status: :bad_request
       end 
   end
 

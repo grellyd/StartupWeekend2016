@@ -1,4 +1,4 @@
 class Location < ApplicationRecord
-    belongs_to :customer
+    belongs_to :trip
     belongs_to :user
 end
