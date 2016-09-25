@@ -14,45 +14,44 @@
   3. Deviation Allowance from the driver's optimal route
   4. Rider Availablity
 
-* API endpoints are as follows:
-
-    * root/api/v1/users/
-       * get      users#index
-       * post     users#create
-    
-    * root/api/v1/users/:id
-       *  get      users#show
-       *  put      users#update
-       *  patch    users#update
-       *  delete   users#destroy
-    
-    * root/api/v1/trips
-       * get     trips#index
-       * post    trips#create
-    
-    * root/api/v1/trips/:id
-       *  get     trips#show
-       *  put     trips#update
-       *  patch   trips#update
-       *  delete  trips#destroy
-
-    *  root/api/v1/locations
-       *  get     locations#index
-       *  post    locations#create
-    
-    *  root/api/v1/locations/:id
-       *  get     locations#show
-       *  put     locations#update
-       *  patch   locations#update
-       *  delete  locations#destroy
-
-
 ## Stack:
 * Rails 5.0.0.1
 * Ruby 2.3.1p112
-* Gentoo Linux Dev Environment
 * Auto-deploys off Production branch to Heroku webapp.
 * Data generated through curl requests rather than DB migrations, to simulate frontend requests.
+
+### API Endpoints
+
+* root/api/v1/users/
+   * get      users#index
+   * post     users#create
+
+* root/api/v1/users/:id
+   *  get      users#show
+   *  put      users#update
+   *  patch    users#update
+   *  delete   users#destroy
+
+* root/api/v1/trips
+   * get     trips#index
+   * post    trips#create
+
+* root/api/v1/trips/:id
+   *  get     trips#show
+   *  put     trips#update
+   *  patch   trips#update
+   *  delete  trips#destroy
+
+*  root/api/v1/locations
+   *  get     locations#index
+   *  post    locations#create
+
+*  root/api/v1/locations/:id
+   *  get     locations#show
+   *  put     locations#update
+   *  patch   locations#update
+   *  delete  locations#destroy
+
 
 ## Difficulties
 * Poor DB schema, which led to isses when modeling the database.
