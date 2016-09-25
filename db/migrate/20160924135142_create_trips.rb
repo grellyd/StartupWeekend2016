@@ -9,7 +9,7 @@ class CreateTrips < ActiveRecord::Migration[5.0]
       t.references :origin_location
       t.references :destination_location
 
-      t.references :user
+      t.references :user, null: true
 
       t.timestamps
     end

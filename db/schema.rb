@@ -19,11 +19,9 @@ ActiveRecord::Schema.define(version: 20160924135222) do
     t.float    "lat"
     t.float    "lon"
     t.string   "addr"
-    t.integer  "trip_id"
     t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["trip_id"], name: "index_locations_on_trip_id", using: :btree
     t.index ["user_id"], name: "index_locations_on_user_id", using: :btree
   end
 
@@ -50,6 +48,8 @@ ActiveRecord::Schema.define(version: 20160924135222) do
     t.boolean  "verifiedDriver"
     t.string   "field"
     t.string   "gender"
+    t.string   "profilePic"
+    t.string   "description"
     t.integer  "trips_id"
     t.integer  "home_location_id"
     t.integer  "work_location_id"

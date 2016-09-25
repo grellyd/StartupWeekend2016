@@ -6,8 +6,7 @@ class CreateLocations < ActiveRecord::Migration[5.0]
       t.string :addr
 
       # associated trips and user
-      t.references :trip
-      t.references :user
+      t.references :user, null: true
 
       t.timestamps
     end
