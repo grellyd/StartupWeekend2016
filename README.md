@@ -14,13 +14,26 @@
   3. Deviation Allowance from the driver's optimal route
   4. Rider Availablity
 
+### Matching Logic:
+1. A ride is created from the driver's interface for a certain date.
+2. That trip has the driver's home and work location set as the origin and destination
+3. The an intial route is mapped along the optimal route.
+4. The area band around the route is simulated, and the available riders are found
+5. Matches are then presented to the driver through the api endpoints.
+6. The driver's selections are returned through the api 
+7. The final route is calculated with the driver and the riders.
+
 ## Stack:
 * Rails 5.0.0.1
 * Ruby 2.3.1p112
 * Auto-deploys off Production branch to Heroku webapp.
 * Data generated through curl requests rather than DB migrations, to simulate frontend requests.
 
-### API Endpoints
+## Future Expansions
+* Historical User Geolocation Data Collection to provide geographic trend mapping.
+* 
+
+## API Endpoints
 
 * root/api/v1/users/
    * get      users#index
