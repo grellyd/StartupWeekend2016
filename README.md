@@ -78,24 +78,24 @@
   * EG:
 
 ### Users
-name:string
-credit:int
-details:int - foreign_key UserDetails
+ - name:string
+ - credit:int
+ - details:int - foreign_key UserDetails
 
 ### UserDetails
-rating:float
-onBoarding:string
-occupationalField:string
-gender:string
-verified:boolean
-description:string
-linkedInProfile:string
-profilePicUrl:string
+ - rating:float
+ - onBoarding:string
+ - occupationalField:string
+ - gender:string
+ - verified:boolean
+ - description:string
+ - linkedInProfile:string
+ - profilePicUrl:string
 
 ### Location
-latLon: point
-user:int - foreign_key User
-trip: int - foreign_key Trip
+ - latLon: point
+ - user:int - foreign_key User
+ - trip: int - foreign_key Trip
 
 ### Trip
 
