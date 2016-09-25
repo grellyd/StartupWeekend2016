@@ -18,10 +18,11 @@
 1. A ride is created from the driver's interface for a certain date.
 2. That trip has the driver's home and work location set as the origin and destination
 3. The an intial route is mapped along the optimal route.
-4. The area band around the route is simulated, and the available riders are found
-5. Matches are then presented to the driver through the api endpoints.
-6. The driver's selections are returned through the api 
-7. The final route is calculated with the driver and the riders.
+4. The area band around the route is simulated from the driver's deviation allowance.
+5. Available riders are found.
+6. Matches are then presented to the driver through the api endpoints.
+7. The driver's selections are returned through the api 
+8. The final route is calculated with the driver and the riders.
 
 ## Stack:
 * Rails 5.0.0.1
@@ -31,7 +32,8 @@
 
 ## Future Expansions
 * Historical User Geolocation Data Collection to provide geographic trend mapping.
-* 
+* Machine Learning on neighborhood demand to provide deeper understanding of the classifications for our user base.
+  * Allows for more targeted networking marketing and user acquisition strategies. 
 
 ## API Endpoints
 
@@ -75,4 +77,25 @@
   * Create a schema where the objects are not as entangled.
   * EG:
 
+### Users
+name:string
+credit:int
+details:int - foreign_key UserDetails
+
+### UserDetails
+rating:float
+onBoarding:string
+occupationalField:string
+gender:string
+verified:boolean
+description:string
+linkedInProfile:string
+profilePicUrl:string
+
+### Location
+latLon: point
+user:int - foreign_key User
+trip: int - foreign_key Trip
+
+### Trip
 
