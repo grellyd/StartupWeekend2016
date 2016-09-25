@@ -17,7 +17,7 @@
 ### Matching Logic:
 1. A ride is created from the driver's interface for a certain date.
 2. That trip has the driver's home and work location set as the origin and destination
-3. The an intial route is mapped along the optimal route.
+3. The an initial route is mapped along the optimal route.
 4. The area band around the route is simulated from the driver's deviation allowance.
 5. Available riders are found.
 6. Matches are then presented to the driver through the api endpoints.
@@ -69,8 +69,8 @@
 
 
 ## Difficulties
-* Poor DB schema, which led to isses when modeling the database.
-  * Inparticular the relationships between the objects was improperly set up and managed.
+* Poor DB schema, which led to issues when modeling the database.
+  * In particular the relationships between the objects was improperly set up and managed.
 * As the model was imperfect, the farther the database progressed, the more intertwined and complex the application became. This of course led to errors which became harder and harder to track down.
 * Initial schema had many ties between the three main models, Trips, Users, and Locations
 * Solution:
