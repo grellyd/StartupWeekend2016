@@ -12,7 +12,7 @@
   1. Arrival Time
   2. Driver Origin
   3. Deviation Allowance from the driver's optimal route
-  4. Rider Availablity
+  4. Rider Availability
 
 ### Matching Logic:
 1. A ride is created from the driver's interface for a certain date.
