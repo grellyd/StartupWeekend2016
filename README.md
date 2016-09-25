@@ -16,35 +16,35 @@
 
 * API endpoints are as follows:
 
-    root/api/v1/users/
-        get      users#index
-        post     users#create
+    * root/api/v1/users/
+       * get      users#index
+       * post     users#create
     
-    root/api/v1/users/:id
-        get      users#show
-        put      users#update
-        patch    users#update
-        delete   users#destroy
+    * root/api/v1/users/:id
+       *  get      users#show
+       *  put      users#update
+       *  patch    users#update
+       *  delete   users#destroy
     
-    root/api/v1/trips
-        get     trips#index
-        post    trips#create
+    * root/api/v1/trips
+       * get     trips#index
+       * post    trips#create
     
-    root/api/v1/trips/:id
-        get     trips#show
-        put     trips#update
-        patch   trips#update
-        delete  trips#destroy
+    * root/api/v1/trips/:id
+       *  get     trips#show
+       *  put     trips#update
+       *  patch   trips#update
+       *  delete  trips#destroy
 
-    root/api/v1/locations
-        get     locations#index
-        post    locations#create
+    *  root/api/v1/locations
+       *  get     locations#index
+       *  post    locations#create
     
-    root/api/v1/locations/:id
-        get     locations#show
-        put     locations#update
-        patch   locations#update
-        delete  locations#destroy
+    *  root/api/v1/locations/:id
+       *  get     locations#show
+       *  put     locations#update
+       *  patch   locations#update
+       *  delete  locations#destroy
 
 
 ## Stack:
